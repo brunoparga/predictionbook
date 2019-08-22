@@ -20,6 +20,9 @@ describe CredenceQuestion do
     # it loads of times. But if we don't do it enough, our test will be prone to
     # failing randomly.
     #   Is it possible to only have this test run if we request it explicitly?
+
+    ## Note - the test is indeed failing randomly. I don't know if I know how to
+    ## solve this
     question = FactoryBot.create(:credence_question)
     FactoryBot.create_list(:credence_answer, 3, credence_question: question)
 
